@@ -1,0 +1,19 @@
+{
+	 "name": "zen.js"
+  , "version": "0.0.1"
+  , "description": "Enlightenment"
+  , "author": "yawnt <yawn.localhost@gmail.com"
+  , "repository": {
+    "type": "git"
+    , "url": "git://github.com/yawnt/zen.git"
+  }
+  , "dependencies": {
+    "request": ">= 0.0.0"
+  }
+  , "devDependencies": {
+    "vows": ">= 0.0.0"
+  }
+  , "scripts": {
+    "test": "vows test/*-test.js"
+  }
+}
