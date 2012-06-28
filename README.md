@@ -42,11 +42,19 @@ zen.listBuckets(function(e, buckets) {
 
 Stores an object in the database
 
-__WARNING:__ This function should not be used in production environment because it consumes a lot of memory
-
 ```javascript
-zen.listBuckets(function(e, buckets) {
-  console.log(buckets) // []
+zen.store('bucket', 'key', {hey: 'hi'}, function(e) {
+  console.log() // []
+});
+
+zen.store('bucket', {hey: 'hi'}, function(e) {
+  console.log() // []
+});
+
+zen.store('bucket', 'key', {hey: 'hi'}, {
+    'Content-Type': 'text/plain'
+  },function(e) {
+    console.log() // []
 });
 ```
 
