@@ -44,17 +44,17 @@ Stores an object in the database
 
 ```javascript
 zen.store('bucket', 'key', {hey: 'hi'}, function(e) {
-  console.log(e) // []
+  console.log(e) // null
 });
 
 zen.store('bucket', {hey: 'hi'}, function(e) {
-  console.log(e) // []
+  console.log(e) // null
 });
 
 zen.store('bucket', 'key', {hey: 'hi'}, {
     'Content-Type': 'text/plain'
   },function(e) {
-    console.log(e) // []
+    console.log(e) // null
 });
 ```
 
