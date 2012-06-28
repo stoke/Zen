@@ -58,6 +58,14 @@ zen.store('bucket', 'key', {hey: 'hi'}, {
 });
 ```
 
+## Tests
+
+Tests are written with Mocha
+
+```
+$ npm test
+```
+
 ## To Do
 
 - Protobuf APIs
