@@ -28,6 +28,14 @@ describe('zen', function() {
 
       zen._protocol.should.equal('protobuf');
     })
+    it('should load the correct engine even when no url is passed', function() {
+      zen.use({ protocol: 'protobuf'});
+      
+      zen._proto.should.equal('http:');
+      zen._host.should.equal('127.0.0.1');
+      zen._port.should.equal('8098')
+      zen._protocol.should.equal('protobuf');
+    })
   })
 
   describe('#_id', function() {
