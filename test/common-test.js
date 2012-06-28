@@ -23,11 +23,18 @@ describe('zen', function() {
       zen._host.should.equal('foobar');
       zen._port.should.equal('1234')     
     });
+    it('should load the correct engine when passed', function() {
+      zen.use('http://localhost', { protocol: 'protobuf'});
+
+      zen._engine.protocol.should.equal('protobuf');
+    })
   })
 
   describe('#getClientId()', function() {
-    it('should wrap utile.randomString()', function() {
-      zen.getClientId().should.be.a('string');
+    it('should wrap utile.randomString() and create `zen._id`', function() {
+      zen.getClientId();
+
+      zen._id.should.be.a('string');
     });
   });
 });
