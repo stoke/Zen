@@ -38,6 +38,18 @@ zen.listBuckets(function(e, buckets) {
 });
 ```
 
+#### zen.store(bucket, [key], object, [options], [callback])
+
+Stores an object in the database
+
+__WARNING:__ This function should not be used in production environment because it consumes a lot of memory
+
+```javascript
+zen.listBuckets(function(e, buckets) {
+  console.log(buckets) // []
+});
+```
+
 ## To Do
 
 - Protobuf APIs

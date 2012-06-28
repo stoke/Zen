@@ -20,6 +20,12 @@ describe('zen', function() {
         done();
       });
     });
+    it('should save object even if no `key` is passed', function(done) {
+      zen.store('cestone', {lol: 'true'}, function(e,b) {
+        assert.equal(null, e);
+        done();
+      });
+    });
   });
 
 });
