@@ -1,4 +1,5 @@
-var zen  = require('../');
+var zen    = require('../')
+  , assert = require('assert');
 
 zen.use();
 
@@ -11,4 +12,14 @@ describe('zen', function() {
       });
     });
   });
+
+  describe('#store()', function() {
+    it('should save object if `key` is passed', function(done) {
+      zen.store('cestone', 'heya', {lol: 'true'}, function(e,b) {
+        assert.equal(null, e);
+        done();
+      });
+    });
+  });
+
 });
