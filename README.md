@@ -22,6 +22,7 @@ zen.use('http://site.com:1234', {protocol: 'protobuf'})
 #### zen.listBuckets()
 
 Gets a list of buckets from the database
+
 __WARNING:__ This function should not be used in production environment because it consumes a lot of memory
 
 ```javascript
