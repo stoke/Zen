@@ -3,6 +3,13 @@ Zen
 
 The Riak way to englightenment
 
+## Install
+
+```
+$ npm install zen.js
+```
+
+__Note:__ this is an early-alpha release and it lacks all the main features (i just wanted to be sure no one was going to steal zen.js :P)
 ## API
 
 ####zen.use([url, options])
