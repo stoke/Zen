@@ -24,4 +24,10 @@ describe('zen', function() {
       zen._port.should.equal('1234')     
     });
   })
+
+  describe('#getClientId()', function() {
+    it('should wrap utile.randomString()', function() {
+      zen.getClientId().should.be.a('string');
+    });
+  });
 });

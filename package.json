@@ -13,7 +13,7 @@
   , "devDependencies": {
     "mocha": ">= 0.0.0"
     , "should": ">= 0.0.0"
-    , "chai": ">= 0.0.0"
+    , "utile": ">= 0.0.0"
   }
   , "scripts": {
     "test": "mocha -R spec -r should test/*-test.js"
