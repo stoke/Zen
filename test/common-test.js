@@ -26,13 +26,12 @@ describe('zen', function() {
     it('should load the correct engine when passed', function() {
       zen.use('http://localhost', { protocol: 'protobuf'});
 
-      zen._engine.protocol.should.equal('protobuf');
+      zen._protocol.should.equal('protobuf');
     })
   })
 
-  describe('#getClientId()', function() {
-    it('should wrap utile.randomString() and create `zen._id`', function() {
-      zen.getClientId();
+  describe('#_id', function() {
+    it('should be a random string', function() {
 
       zen._id.should.be.a('string');
     });
