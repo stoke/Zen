@@ -57,6 +57,16 @@ zen.store('bucket', 'key', {hey: 'hi'}, {
     console.log(e) // null
 });
 ```
+#### zen.fetch(bucket, key, [headers]], callback)
+
+Fetches an object from the database
+
+```javascript
+zen.fetch('key', {header: 'val'}, function(e, i) {
+  console.log(i) // {key: 'val'}
+});
+```
+
 
 ## Tests
 
