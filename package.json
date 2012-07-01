@@ -9,6 +9,8 @@
   }
   , "dependencies": {
     "request": ">= 0.0.0"
+    , "protobuf": "git://github.com/stoke/protobuf.git"
+    , "optimal": ">= 0.0.0"
   }
   , "devDependencies": {
     "mocha": ">= 0.0.0"

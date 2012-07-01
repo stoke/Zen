@@ -15,14 +15,13 @@ describe('zen', function() {
 
   describe('#store()', function() {
     it('should save object if `key` is passed', function(done) {
-      zen.store('cestone', 'heya', {lol: 'true'}, function(e,b) {
+      zen.store('cestone', 'heyo', {lol: 'true'}, function(e,b) {
         assert.equal(null, e);
         done();
       });
     });
     it('should save object even if no `key` is passed', function(done) {
       zen.store('cestone', {lol: 'true'}, function(e,b) {
-        console.log(b);
         assert.equal(null, e);
         done();
       });
@@ -31,7 +30,7 @@ describe('zen', function() {
 
   describe('#fetch()', function() {
     it('should fetch object from specified bucket', function(done) {
-      zen.fetch('cestone', 'heya', function(e, i) {
+      zen.fetch('cestone', 'heyo', function(e, i) {
         assert.equal(i.lol, 'true');
         done();
       });
