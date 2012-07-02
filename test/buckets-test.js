@@ -45,7 +45,7 @@ describe('zen', function() {
           assert.equal(null, e);
           zen.fetch('cestone', 'test', function(e, b) {
             assert.equal(null, e);
-            b.should.eql({});
+            assert.equal(null, b);
             done();
           });
         });
