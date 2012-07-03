@@ -34,7 +34,22 @@ describe('zen', function() {
         assert.equal(i.lol, 'true');
         done();
       });
-    })
+    });
   });
 
+  describe('#delete()', function() {
+    it('should delete an object if exists', function(done) {
+      zen.store('cestone', 'test', {test: true}, function(e, b) {
+        assert.equal(null, e);
+        zen.delete('cestone', 'test', function(e) {
+          assert.equal(null, e);
+          zen.fetch('cestone', 'test', function(e, b) {
+            assert.equal(null, e);
+            assert.equal(null, b);
+            done();
+          });
+        });
+      });
+    });
+  });
 });

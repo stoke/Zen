@@ -62,11 +62,20 @@ zen.store('bucket', 'key', {hey: 'hi'}, {
 Fetches an object from the database
 
 ```javascript
-zen.fetch('key', {header: 'val'}, function(e, i) {
+zen.fetch('bucket', 'key', {header: 'val'}, function(e, i) {
   console.log(i) // {key: 'val'}
 });
 ```
 
+#### zen.delete(bucket, key, [headers]], callback)
+
+Deletes an object from the database
+
+```javascript
+zen.delete('bucket', 'key', {header: 'val'}, function(e) {
+  console.log(e); // null
+});
+```
 
 ## Tests
 
