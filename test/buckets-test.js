@@ -66,10 +66,10 @@ describe('zen', function() {
 
   describe('#setBucket()', function() {
     it('should set properties for a `bucket`', function(done) {
-      zen.setBucket('cestone', {'last_write_wins': 'true'}, function(e) {
+      zen.setBucket('cestone', {'last_write_wins': 'false'}, function(e) {
         assert.equal(null, e);
         zen.getBucket('cestone', function(e, props) {
-          props.props.last_write_wins.should.equal(true);
+          props.props.last_write_wins.should.equal(false);
           done();
         });
       })

@@ -53,6 +53,24 @@ zen.getBucket('bucket', {'Content-Type': 'application/json'}, function(err, buck
 });
 ```
 
+#### zen.setBucket(bucket, props, [headers], callback)
+
+Sets properties for the specified bucket
+
+```javascript
+zen.setBucket('bucket', {'last_write_wins': true}, function(e) {
+  console.log(e) // null
+});
+
+zen.setBucket(
+  'bucket'
+  , {'last_write_wins': true}
+  ,{'Content-Type': 'application/json'}
+  , function(e) {
+    console.log(e) // null
+});
+```
+
 #### zen.store(bucket, [key], object, [options], [callback])
 
 Stores an object in the database
