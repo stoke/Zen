@@ -29,7 +29,7 @@ describe('zen', function() {
   });
 
   describe('#fetch()', function() {
-    it('should fetch object from specified bucket', function(done) {
+    it('should fetch `object` from specified bucket', function(done) {
       zen.fetch('cestone', 'heyo', function(e, i) {
         assert.equal(i.lol, 'true');
         done();
@@ -38,7 +38,7 @@ describe('zen', function() {
   });
 
   describe('#delete()', function() {
-    it('should delete an object if exists', function(done) {
+    it('should delete an `object` if it exists', function(done) {
       zen.store('cestone', 'test', {test: true}, function(e, b) {
         assert.equal(null, e);
         zen.delete('cestone', 'test', function(e) {
@@ -51,5 +51,16 @@ describe('zen', function() {
         });
       });
     });
+  });
+
+  describe('#getBucket()', function() {
+    it('should return properties of a `bucket`', function(done) {
+      zen.getBucket('cestone', function(err, props) {
+        assert.equal(null, err);
+        props.should.be.a('object');
+        props.props.name.should.equal('cestone');
+        done();
+      });
+    })
   });
 });

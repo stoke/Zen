@@ -39,6 +39,20 @@ zen.listBuckets(function(e, buckets) {
 });
 ```
 
+#### zen.getBucket(bucket, [headers], callback)
+
+Gets properties for the specified bucket
+
+```javascript
+zen.getBucket('bucket', function(e, bucket) {
+  console.log(bucket.props) // {name: 'bucket'.... }
+});
+
+zen.getBucket('bucket', {'Content-Type': 'application/json'}, function(err, bucket) {
+  console.log(bucket.props) // {name: 'bucket'.... }
+});
+```
+
 #### zen.store(bucket, [key], object, [options], [callback])
 
 Stores an object in the database
