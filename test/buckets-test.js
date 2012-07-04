@@ -63,4 +63,16 @@ describe('zen', function() {
       });
     })
   });
+
+  describe('#setBucket()', function() {
+    it('should set properties for a `bucket`', function(done) {
+      zen.setBucket('cestone', {'last_write_wins': 'true'}, function(e) {
+        assert.equal(null, e);
+        zen.getBucket('cestone', function(e, props) {
+          props.props.last_write_wins.should.equal(true);
+          done();
+        });
+      })
+    });
+  })
 });
