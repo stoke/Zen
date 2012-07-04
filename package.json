@@ -1,7 +1,8 @@
 {
   "name": "zen.js"
-  , "version": "0.0.4"
-  , "description": "Enlightenment"
+  , "version": "0.0.5"
+  , "description": "Pure js driver for Riak"
+  , "keywords": ["riak", "driver", "http", "protobuf"]
   , "author": "yawnt <yawn.localhost@gmail.com"
   , "repository": {
     "type": "git"
