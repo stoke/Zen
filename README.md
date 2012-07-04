@@ -132,6 +132,18 @@ zen.status(function(e, stats) {
 });
 ```
 
+#### zen.mapReduce(inputs, map, reduce, [headers], callback)
+
+Performs a mapReduce operation
+
+More info [here](http://wiki.basho.com/MapReduce.html)
+
+```javascript
+zen.mapReduce([['bucket1', 'key1'], ['bucket2', 'key2']], function(v) { ... }, function(v) { ... }, function(e, i) {
+  console.log(i); / [...]
+});
+```
+
 ## Tests
 
 Tests are written with Mocha
