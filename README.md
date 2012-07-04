@@ -65,7 +65,7 @@ zen.setBucket('bucket', {'last_write_wins': true}, function(e) {
 zen.setBucket(
   'bucket'
   , {'last_write_wins': true}
-  ,{'Content-Type': 'application/json'}
+  , {'Content-Type': 'application/json'}
   , function(e) {
     console.log(e) // null
 });
