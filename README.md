@@ -110,6 +110,16 @@ zen.delete('bucket', 'key', {header: 'val'}, function(e) {
 });
 ```
 
+#### zen.ping(callback)
+
+Checks if database is online
+
+```javascript
+zen.ping(function(e, online) {
+  console.log(online) // true
+});
+```
+
 ## Tests
 
 Tests are written with Mocha
