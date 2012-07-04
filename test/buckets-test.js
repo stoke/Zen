@@ -72,7 +72,17 @@ describe('zen', function() {
           props.props.last_write_wins.should.equal(false);
           done();
         });
-      })
+      });
     });
   })
+
+  describe('#ping()', function() {
+    it('should check if db is online', function(done) {
+      zen.ping(function(e, online) {
+        assert.equal(null, e);
+        online.should.equal(true);
+        done();
+      });
+    });
+  });
 });
