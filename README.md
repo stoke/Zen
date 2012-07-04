@@ -120,6 +120,18 @@ zen.ping(function(e, online) {
 });
 ```
 
+#### zen.status(callback)
+
+Returns Riak's performance and configuration datas
+
+__WARNING:__ it requires ```riak_kv_stat``` to be enabled
+
+```javascript
+zen.status(function(e, stats) {
+  console.log(stats) // {....}
+});
+```
+
 ## Tests
 
 Tests are written with Mocha
