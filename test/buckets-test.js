@@ -74,7 +74,7 @@ describe('zen', function() {
         });
       });
     });
-  })
+  });
 
   describe('#ping()', function() {
     it('should check if db is online', function(done) {
@@ -95,4 +95,24 @@ describe('zen', function() {
       });
     });
   });*/
+
+  describe('#mapReduce()', function() {
+    it ('should map and reduce', function(done) {
+      zen.store('cestone', 'test_mapReduce1', [1, 2, 3], function(e, b) {
+        assert.equal(null, e);
+
+        zen.store('cestone', 'test_mapReduce2', [4, 5, 6], function(e, b) {
+          var map = function(v) { return [JSON.parse(v.values[0].data)]; },
+              reduce = function(v) { return v[0].concat(v[1]); };
+          
+          assert.equal(null, e);
+          zen.mapReduce([['cestone', 'test_mapReduce1'], ['cestone', 'test_mapReduce2']], map, reduce, function(e, b) {
+            assert.equal(null, e);
+            b.should.eql([1, 2, 3, 4, 5, 6]);
+            done();
+          });
+        });
+      });
+    });
+  });
 });
