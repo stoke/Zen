@@ -19,4 +19,5 @@
   , "scripts": {
     "test": "mocha -R spec -r should test/*-test.js"
   }
+  , "license": "MIT"
 }

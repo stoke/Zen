@@ -11,7 +11,6 @@ The Riak way to enlightenment
 $ npm install zen.js
 ```
 
-__Note:__ this is an early-alpha release and it lacks all the main features (i just wanted to be sure no one was going to steal zen.js :P)
 ## API
 
 ####zen.use([url, options])
@@ -59,7 +58,7 @@ zen.store('bucket', 'key', {hey: 'hi'}, {
     console.log(e) // null
 });
 ```
-#### zen.fetch(bucket, key, [headers]], callback)
+#### zen.fetch(bucket, key, [headers], callback)
 
 Fetches an object from the database
 
@@ -86,6 +85,10 @@ Tests are written with Mocha
 ```
 $ npm test
 ```
+
+## License
+
+__MIT__ (see ```LICENSE```)
 
 ## To Do
 
